@@ -3,12 +3,14 @@ class Student {
     private String name;
     private int age;
     private String studentId;
-    private int tinggi;
+    private String major; // Atribut baru untuk jurusan
+
     // Konstruktor
-    public Student(String name, int age, String studentId) {
+    public Student(String name, int age, String studentId, String major) {
         setName(name);
         setAge(age);
         setStudentId(studentId);
+        setMajor(major); // Inisialisasi jurusan
     }
 
     // Getter dan Setter (Encapsulation)
@@ -36,9 +38,17 @@ class Student {
         this.studentId = studentId;
     }
 
+    public String getMajor() {
+        return major; // Getter untuk jurusan
+    }
+
+    public void setMajor(String major) {
+        this.major = major; // Setter untuk jurusan
+    }
+
     // Metode untuk mendapatkan detail mahasiswa dalam bentuk string
     private String getStudentDetails() {
-        return "Student Name: " + name + "\nAge: " + age + "\nStudent ID: " + studentId;
+        return "Student Name: " + name + "\nAge: " + age + "\nStudent ID: " + studentId + "\nMajor: " + major;
     }
 
     // Metode untuk menampilkan informasi mahasiswa ke konsol
@@ -49,7 +59,7 @@ class Student {
     // Main method untuk menjalankan contoh
     public static void main(String[] args) {
         // Membuat objek Student dan menampilkan informasinya
-        Student student = new Student("Alice", 21, "S12345");
+        Student student = new Student("Alice", 21, "S12345", "Computer Science"); // Menginisialisasi jurusan
         student.displayStudentInfo();
     }
 }
