@@ -3,7 +3,7 @@ class Student {
     private String name;
     private int age;
     private String studentId;
-    private int tinggi;
+
     // Konstruktor
     public Student(String name, int age, String studentId) {
         setName(name);
